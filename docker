@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+RUN apt-get -y install && apt-get install -y
+RUN  apt-get install clang
+WORKDIR /home/ubuntu/dockerfolder_1
+RUN clang++ -o myFirstExe main.cpp
+CMD ["./myFirstExe"]
